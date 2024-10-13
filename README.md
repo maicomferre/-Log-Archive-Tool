@@ -24,7 +24,7 @@ A project made for https://roadmap.sh/projects/log-archive-tool
 
 _From deb:_
 ```
-wget https://github.com/maicomferre/-Log-Archive-Tool/releases/latest
+wget https://github.com/maicomferre/-Log-Archive-Tool/releases/download/0.0.1/logs-archive_0.0.1-1_amd64.deb
 
 sudo apt install ./log-archive-tool
 
