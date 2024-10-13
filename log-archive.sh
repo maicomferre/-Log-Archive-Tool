@@ -1,9 +1,8 @@
 #!/bin/bash
 
-log_path=''
-#source utils.sh
+log_path=$1
 
-if [ '' == "$1" ]; then
+if [ '' == "$log_path" ]; then
 	echo -e "\e[33mUsing /var/log by default.\e[0m"
 	log_path="/var/log"
 else
@@ -31,6 +30,7 @@ printf "%-${file_width}s | %-${size_width}s |   %-${action_width}s |\n" \
 
 remember=""
 readf=""  # Inicializar a variável readf
+fsize=0
 for x in $read
 do 
 	if [ "$(dirname "$x")" != "$remember" ]; then
@@ -63,6 +63,11 @@ if [ $run_as_root_message == 1 ]; then
 	exit
 fi
 
+if [ "$count" == "0" ]; then
+	echo "Nothing to remove"
+	exit
+fi
+
 read -r -p "You want to archive $count logs in $log_path? (Y/n) " choise
 
 if [ "$(echo "$choise" | tr "[:lower:]" "[:upper:]")" != 'Y' ]; then
@@ -82,3 +87,8 @@ fi
 output_dir="$output_dir"/"$output_name"
 
 eval tar -czf "$output_dir" -C '$log_path' $readf
+
+for x in $readf
+do 
+	rm -v "$log_path/$x"
+done
