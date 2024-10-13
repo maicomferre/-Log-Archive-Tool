@@ -12,8 +12,11 @@ A project made for https://roadmap.sh/projects/log-archive-tool
     # will compact all logs into /var/logs/log_archive/.tar.gz 
 ```
 
+### Running without root
 ![Example running error no run as root](./img/11.png)
+### Running and delete an file
 ![Running and delete an file](./img/21.png)
+### nothing to do
 ![Running without what do](./img/31.png)
 
 
