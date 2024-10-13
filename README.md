@@ -14,7 +14,7 @@ A project made for https://roadmap.sh/projects/log-archive-tool
 
 ### Install:
 
-_From deb:
+_From deb:_
 ```
 wget https://github.com/maicomferre/-Log-Archive-Tool/releases/latest
 
@@ -24,7 +24,7 @@ logarchive [/path/log]
 
 ```
 
-_From source_:
+_From source:_
 ```
 wget https://github.com/maicomferre/-Log-Archive-Tool/releases/latest
 
